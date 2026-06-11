@@ -11,6 +11,13 @@ use App\Models\Broadcast;
 use Carbon\Carbon;
 
 // ==========================================
+// RUTE UTAMA (ROOT REDIRECT)
+// ==========================================
+Route::get('/', function () {
+    return redirect()->route('login');
+});
+
+// ==========================================
 // RUTE AUTENTIKASI
 // ==========================================
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
